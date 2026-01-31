@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open in Opera",
+            "type": "shell",
+            "command": "Start-Process",
+            "args": [
+                "C:/Users/pedro/AppData/Local/Programs/Opera/opera.exe",
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Opens the current file in Opera"
+        }
+    ]
+}

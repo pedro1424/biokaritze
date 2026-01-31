@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Linktree Personal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        glass: 'rgba(255, 255, 255, 0.2)',
+                        glassHover: 'rgba(255, 255, 255, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Personaliza el fondo aquí */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* Opcion alternativa: background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+        }
+
+        .glass-btn {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-white font-sans antialiased flex flex-col items-center justify-center p-4">
+
+    <!-- Contenedor Principal Limitado para Móviles -->
+    <main class="w-full max-w-sm flex flex-col gap-6 animate-fade-in-up">
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN PERFIL -->
+        <!-- ========================================== -->
+        <header class="flex flex-col items-center text-center space-y-3 mt-8">
+            <!-- 
+                INSTRUCCIONES:
+                1. Reemplaza 'perfil.png' con la ruta de tu foto.
+                2. Asegúrate de que la imagen sea cuadrada para que el círculo sea perfecto.
+            -->
+            <div class="relative">
+                <img src="./perf.jpg" alt="Foto de Perfil"
+                    class="w-24 h-24 rounded-full border-4 border-white/30 shadow-lg object-cover">
+            </div>
+
+            <!-- Nombre y Descripción -->
+            <div>
+                <!-- Cambia tu Nombre aquí -->
+                <h1 class="text-2xl font-bold tracking-tight">Karitzee</h1>
+                <!-- Cambia tu descripción breve aquí -->
+                <p class="text-white/80 text-sm mt-1">Creador Digital | Blogs | Tips</p>
+            </div>
+        </header>
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN DE LINKS (BOTONES) -->
+        <!-- ========================================== -->
+        <nav class="flex flex-col gap-4 w-full px-2">
+
+            <!-- Link 1 -->
+            <!-- Reemplaza href="#" con tu URL real -->
+            <a href="https://tublog.com" target="_blank"
+                class="glass-btn group flex items-center justify-between px-5 py-4 w-full bg-white/20 border border-white/30 rounded-2xl shadow-md transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] hover:shadow-xl">
+                <div class="flex items-center gap-3">
+                    <!-- Icono (FontAwesome) -->
+                    <i class="fas fa-globe text-xl opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    <span class="font-semibold text-lg">Mi Sitio Web</span>
+                </div>
+                <!-- Icono de flecha o externo (opcional) -->
+                <i class="fas fa-arrow-right text-sm opacity-50 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <!-- Link 2 -->
+            <a href="https://instagram.com/tuusuario" target="_blank"
+                class="glass-btn group flex items-center justify-between px-5 py-4 w-full bg-white/20 border border-white/30 rounded-2xl shadow-md transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] hover:shadow-xl">
+                <div class="flex items-center gap-3">
+                    <i class="fab fa-instagram text-xl opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    <span class="font-semibold text-lg">Instagram</span>
+                </div>
+            </a>
+
+            <!-- Link 3 -->
+            <a href="https://twitter.com/tuusuario" target="_blank"
+                class="glass-btn group flex items-center justify-between px-5 py-4 w-full bg-white/20 border border-white/30 rounded-2xl shadow-md transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] hover:shadow-xl">
+                <div class="flex items-center gap-3">
+                    <i class="fab fa-twitter text-xl opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    <span class="font-semibold text-lg">Twitter / X</span>
+                </div>
+            </a>
+
+            <!-- Link 4 -->
+            <a href="https://linkedin.com/in/tuusuario" target="_blank"
+                class="glass-btn group flex items-center justify-between px-5 py-4 w-full bg-white/20 border border-white/30 rounded-2xl shadow-md transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] hover:shadow-xl">
+                <div class="flex items-center gap-3">
+                    <i class="fab fa-linkedin text-xl opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    <span class="font-semibold text-lg">LinkedIn</span>
+                </div>
+            </a>
+
+            <!-- Link 5 -->
+            <a href="mailto:contacto@ejemplo.com"
+                class="glass-btn group flex items-center justify-between px-5 py-4 w-full bg-white/20 border border-white/30 rounded-2xl shadow-md transition-all duration-300 hover:bg-white/30 hover:scale-[1.02] hover:shadow-xl">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-xl opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    <span class="font-semibold text-lg">Contáctame</span>
+                </div>
+            </a>
+
+        </nav>
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN DE REDES SOCIALES (PIE DE PÁGINA) -->
+        <!-- ========================================== -->
+        <footer class="mt-8 mb-6 flex flex-col items-center gap-4">
+            <!-- Iconos Pequeños -->
+            <div class="flex gap-6">
+                <!-- Social 1 -->
+                <a href="#"
+                    class="text-white/70 hover:text-white text-2xl transition-colors hover:scale-110 transform duration-200">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- Social 2 -->
+                <a href="#"
+                    class="text-white/70 hover:text-white text-2xl transition-colors hover:scale-110 transform duration-200">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <!-- Social 3 -->
+                <a href="#"
+                    class="text-white/70 hover:text-white text-2xl transition-colors hover:scale-110 transform duration-200">
+                    <i class="fab fa-spotify"></i>
+                </a>
+            </div>
+
+            <!-- Logo Personal (Opcional) -->
+            <div class="opacity-50 hover:opacity-100 transition-opacity">
+                <!-- Puedes usar una imagen pequeña o texto -->
+                <!-- <img src="logo.png" alt="Logo" class="h-6"> -->
+                <span class="text-xs font-light tracking-widest uppercase">© 2024 Mi Marca</span>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
